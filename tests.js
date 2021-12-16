@@ -22,13 +22,34 @@ describe('sayHello', function () {
     it('should return a string when called', function () {
         expect(typeof sayHello()).toBe('string');
     });
-    it('should return the string "Hello, Jane!" when executed', function() {
+    it('should return the string "Hello, Jane!" when executed with "Jane" as an argument', function() {
         expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
-    it('should return the string "Hello, Alex!" when executed', function() {
+    it('should return the string "Hello, Alex!" when executed with "Alex as an argument', function() {
         expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
-    it('should return the string "Hello, Pat!" when executed', function () {
+    it('should return the string "Hello, Pat!" when executed with "Pat" as an argument', function () {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+    it('should return the string "Hello, World!" when executed with an undefined argument', function () {
+        expect(sayHello()).toBe("Hello, World!")
+    });
+    it('should return the string "Hello, World!" when executed with true as an argument', function () {
+        expect(sayHello(true)).toBe("Hello, World!")
+    });
+    it('should return the string "Hello, World!" when executed with false as an argument', function () {
+        expect(sayHello(false)).toBe("Hello, World!")
+    });
+    it('should return the string "Hello, World!" when executed with null as an argument', function () {
+        expect(sayHello(null)).toBe("Hello, World!")
+    });
+    it('should return the string "Hello, World!" when executed with an empty string as an argument', function () {
+        expect(sayHello("")).toBe("Hello, World!")
+    });
+    it('should return the string "Hello, World!" when executed with the number 2.3 as an argument', function () {
+        expect(sayHello(2.3)).toBe("Hello, World!")
+    });
+    it('should return the string "Hello, World!" when executed with the string 5 as an argument', function () {
+        expect(sayHello("5")).toBe("Hello, World!")
     });
 });
