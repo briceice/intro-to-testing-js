@@ -32,25 +32,25 @@ describe('sayHello', function () {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
     it('should return the string "Hello, World!" when executed with an undefined argument', function () {
-        expect(sayHello()).toBe("Hello, World!")
+        expect(sayHello()).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed with true as an argument', function () {
-        expect(sayHello(true)).toBe("Hello, World!")
+        expect(sayHello(true)).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed with false as an argument', function () {
-        expect(sayHello(false)).toBe("Hello, World!")
+        expect(sayHello(false)).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed with null as an argument', function () {
-        expect(sayHello(null)).toBe("Hello, World!")
+        expect(sayHello(null)).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed with an empty string as an argument', function () {
-        expect(sayHello("")).toBe("Hello, World!")
+        expect(sayHello("")).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed with the number 2.3 as an argument', function () {
-        expect(sayHello(2.3)).toBe("Hello, World!")
+        expect(sayHello(2.3)).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed with the string "5" as an argument', function () {
-        expect(sayHello("5")).toBe("Hello, World!")
+        expect(sayHello("5")).toBe("Hello, World!");
     });
 });
 
@@ -63,9 +63,46 @@ describe('isFive', function () {
         expect(typeof isFive()).toBe('boolean');
     });
     it('should return the boolean value true when executed with the number 5 as an argument', function () {
-        expect(isFive(5)).toBe(true)
+        expect(isFive(5)).toBe(true);
     });
     it('should return the boolean value true when executed with the string "5" as an argument', function () {
-        expect(isFive("5")).toBe(true)
+        expect(isFive("5")).toBe(true);
+    });
+});
+
+// Unit tests for the isEven function
+describe('isEven', function () {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function')
+    });
+    it('should return a boolean when called', function () {
+        expect(typeof isEven()).toBe('boolean');
+    });
+    it('should return the boolean value true when executed with the number 2 as an argument', function () {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true when executed with -4 as an argument', function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when executed with 3 as an argument', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when executed with "banana" as an argument', function () {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return true when executed with "8" as an argument', function () {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when executed with Infinity as an argument', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when executed with true as an argument', function () {
+        expect(isEven(true)).toBe(false);
+    });
+    it('should return false when executed with false as an argument', function () {
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false when executed with an undefined argument', function () {
+        expect(isEven()).toBe(false);
     });
 });

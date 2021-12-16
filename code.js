@@ -14,5 +14,14 @@ function sayHello(input) {
 
 // isFive function
 function isFive(input) {
-    return parseInt(input) === 5
+    return parseInt(input) === 5;
+}
+
+// isEven function
+function isEven(input) {
+    if (!isNaN(parseInt(input))) {
+        return input % 2 === 0;
+    } else {
+        return false
+    }
 }
