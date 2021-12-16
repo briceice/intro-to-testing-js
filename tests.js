@@ -140,3 +140,34 @@ describe('isVowel', function () {
         expect(isVowel()).toBe(false);
     });
 });
+
+// Unit tests for add function
+describe('add', function () {
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return a number value when called', function () {
+        expect(typeof add()).toBe('number');
+    });
+    it('should return 5 when executed with 2 and 3 as arguments', function () {
+        expect(add(2, 3)).toBe(5);
+    });
+    it('should return -12 when executed with -3 and -9 as arguments', function () {
+        expect(add(-3, -9)).toBe(-12)
+    });
+    it('should return 11 when executed with "5" and 6 as arguments', function () {
+        expect(add("5", 6)).toBe(11)
+    });
+    it('should return 6 when executed with "-4" and "10" as arguments', function () {
+        expect(add("-4", "10")).toBe(6)
+    });
+    it('should return NaN when executed with "banana" and "split" as arguments', function () {
+        expect(isNaN(add("banana", "split"))).toBe(true)
+    });
+    it('should return NaN when executed with 2 and "apples" as arguments', function () {
+        expect(isNaN(add(2, "apples"))).toBe(true)
+    });
+    it('should return NaN when executed with an undefined argument', function () {
+        expect(isNaN(add())).toBe(true)
+    });
+});
